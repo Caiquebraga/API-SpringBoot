@@ -6,7 +6,11 @@ import lombok.*;
 import java.time.Instant;
 
 @Entity @Table(name = "companies")
-@Getter @Setter @NoArgsConstructor @AllArgsConstructor @Builder
+@Getter
+@Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Company {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,6 +22,7 @@ public class Company {
     private String website;
 
     @Column(nullable = false, updatable = false)
+    @Builder.Default
     private Instant createAt = Instant.now();
 
 }

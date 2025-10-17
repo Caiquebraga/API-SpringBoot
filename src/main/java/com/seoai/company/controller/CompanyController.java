@@ -12,6 +12,7 @@ import java.util.List;
 @RequestMapping("/api/companies")
 @RequiredArgsConstructor
 public class CompanyController {
+
     private final CompanyService service;
 
     @PostMapping @ResponseStatus(HttpStatus.CREATED)

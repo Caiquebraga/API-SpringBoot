@@ -4,6 +4,7 @@ import com.seoai.company.dto.*;
 import com.seoai.company.entity.Company;
 
 public class CompanyMapper {
+
     public static Company toEntity(CompanyRequest r){
         return Company.builder().name(r.name()).website(r.website()).build();
     }
